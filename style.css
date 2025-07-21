@@ -251,9 +251,24 @@ audio.active {
 }
 
 @media (max-width: 700px) {
+    header {
+        width: 100vw;
+        min-width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0 0 18px 18px;
+    }
+    .pic {
+        min-height: 160px;
+    }
     .search, .Ar {
-        max-width: 95vw;
-        padding: 10px 5vw;
+        max-width: 99vw;
+        width: 99vw;
+        box-sizing: border-box;
+        padding: 10px 2vw;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 14px;
     }
     audio {
         width: 98vw;
@@ -263,11 +278,23 @@ audio.active {
 
 @media (max-width: 500px) {
     header {
-        padding: 10px 2vw 5px 2vw;
-        border-radius: 0 0 15px 15px;
+        padding: 0;
+        width: 100vw;
+        min-width: 100vw;
+        min-height: 100vh;
+        border-radius: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .pic {
+        min-height: 120px;
     }
     .search, .Ar {
-        padding: 8px 2vw;
+        padding: 8px 1vw;
+        width: 99vw;
+        max-width: 99vw;
+        box-sizing: border-box;
+        border-radius: 10px;
     }
     .Ar h3 {
         font-size: 1rem;
