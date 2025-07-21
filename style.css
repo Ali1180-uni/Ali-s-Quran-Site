@@ -265,6 +265,11 @@ audio.active {
         padding: 10px 2vw 5px 2vw;
         border-radius: 0 0 15px 15px;
     }
+    .pic h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
     .search, .Ar {
         padding: 8px 2vw;
     }
