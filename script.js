@@ -34,7 +34,8 @@ async function getData(id) {
     try{
         let resAR = await axios.get(urlAR);
         let resultAR = resAR.data.data.text;
-        h3Arabic.innerText = `Verse ${id}: Arabic`;
+        let Surah = resAR.data.data.surah.englishName;
+        h3Arabic.innerText = `Verse ${id}: Arabic \n Surah - ${Surah}`;
         p.innerText = resultAR;
     }
     catch(err) {
@@ -73,14 +74,16 @@ opt.addEventListener("change", async()=>{
             const urlUR = `https://api.alquran.cloud/v1/ayah/${id}/ur.jalandhry`;
             let resUR = await axios.get(urlUR);
             let resultUR = resUR.data.data.text;
-            h3Trans.innerText = `Verse ${id}: Translation in Urdu`;
+            let Surah = resUR.data.data.surah.englishName;
+            h3Trans.innerText = `Verse ${id}: Translation in Urdu \n Surah - ${Surah}`;
             p2.innerText = resultUR;
         }
         else if(opt.value == "en"){
             const urlEN = `https://api.alquran.cloud/v1/ayah/${id}/en.asad`;
             let resEN = await axios.get(urlEN);
             let resultEN = resEN.data.data.text;
-            h3Trans.innerText = `Verse ${id}: Translation in English`;
+            let Surah = resEN.data.data.surah.englishName;
+            h3Trans.innerText = `Verse ${id}: Translation in English \n Surah - ${Surah}`;
             p2.innerText = resultEN;
         }
     }
