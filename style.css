@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    background: linear-gradient(135deg, #6a811a 0%, #a8a421 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: background 0.5s;
 }
@@ -11,9 +11,10 @@ header {
     background: rgba(255,255,255,0.95);
     padding: 30px 10px 10px 10px;
     text-align: center;
-    border-radius: 0 0 30px 30px;
+    border-radius: 30px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
     margin-bottom: 30px;
+    margin-top: 10px;
     transition: box-shadow 0.4s;
 }
 
