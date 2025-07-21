@@ -10,7 +10,7 @@ let aud = document.querySelector("audio");
 
 
 async function getVoice(id) {
-    const urlAud = `http://api.alquran.cloud/v1/ayah/${id}/ar.alafasy`;
+    const urlAud = `https://api.alquran.cloud/v1/ayah/${id}/ar.alafasy`;
     try{
         let resAR = await axios.get(urlAud);
         let audioUrl = resAR.data.data.audio;
@@ -30,7 +30,7 @@ async function getVoice(id) {
 
 
 async function getData(id) {
-    const urlAR = `http://api.alquran.cloud/v1/ayah/${id}/quran-simple`;
+    const urlAR = `https://api.alquran.cloud/v1/ayah/${id}/quran-simple`;
     try{
         let resAR = await axios.get(urlAR);
         let resultAR = resAR.data.data.text;
@@ -70,14 +70,14 @@ opt.addEventListener("change", async()=>{
     }
     try{
         if(opt.value == "ur"){
-            const urlUR = `http://api.alquran.cloud/v1/ayah/${id}/ur.jalandhry`;
+            const urlUR = `https://api.alquran.cloud/v1/ayah/${id}/ur.jalandhry`;
             let resUR = await axios.get(urlUR);
             let resultUR = resUR.data.data.text;
             h3Trans.innerText = `Verse ${id}: Translation in Urdu`;
             p2.innerText = resultUR;
         }
         else if(opt.value == "en"){
-            const urlEN = `http://api.alquran.cloud/v1/ayah/${id}/en.asad`;
+            const urlEN = `https://api.alquran.cloud/v1/ayah/${id}/en.asad`;
             let resEN = await axios.get(urlEN);
             let resultEN = resEN.data.data.text;
             h3Trans.innerText = `Verse ${id}: Translation in English`;
