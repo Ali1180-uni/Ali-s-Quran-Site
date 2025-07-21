@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #6a811a 0%, #a8a421 100%);
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: background 0.5s;
 }
@@ -11,10 +11,9 @@ header {
     background: rgba(255,255,255,0.95);
     padding: 30px 10px 10px 10px;
     text-align: center;
-    border-radius: 30px;
+    border-radius: 0 0 30px 30px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
     margin-bottom: 30px;
-    margin-top: 10px;
     transition: box-shadow 0.4s;
 }
 
@@ -251,24 +250,9 @@ audio.active {
 }
 
 @media (max-width: 700px) {
-    header {
-        width: 100vw;
-        min-width: 100vw;
-        margin-left: 0;
-        margin-right: 0;
-        border-radius: 0 0 18px 18px;
-    }
-    .pic {
-        min-height: 160px;
-    }
     .search, .Ar {
-        max-width: 99vw;
-        width: 99vw;
-        box-sizing: border-box;
-        padding: 10px 2vw;
-        margin-left: 0;
-        margin-right: 0;
-        border-radius: 14px;
+        max-width: 95vw;
+        padding: 10px 5vw;
     }
     audio {
         width: 98vw;
@@ -278,23 +262,11 @@ audio.active {
 
 @media (max-width: 500px) {
     header {
-        padding: 0;
-        width: 100vw;
-        min-width: 100vw;
-        min-height: 100vh;
-        border-radius: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-    .pic {
-        min-height: 120px;
+        padding: 10px 2vw 5px 2vw;
+        border-radius: 0 0 15px 15px;
     }
     .search, .Ar {
-        padding: 8px 1vw;
-        width: 99vw;
-        max-width: 99vw;
-        box-sizing: border-box;
-        border-radius: 10px;
+        padding: 8px 2vw;
     }
     .Ar h3 {
         font-size: 1rem;
