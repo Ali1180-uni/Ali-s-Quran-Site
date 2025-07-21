@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="quran-icon-png-1.png" type="image/x-icon">
+    <title>Quran</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome To Ali's Quran Site</h1>
+    <div class="search">
+        <input type="text" id="search" placeholder="Surah No:Verse No">
+        <button>Search</button>
+    </div>
+    <div>
+        <audio controls>
+            <source type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="Arabic Ar"><h3></h3><p></p></div>
+
+    <div>
+        <label for="trans">Select Translation:</label>
+        <select id="trans">
+        <option value="non">Select</option>
+        <option value="ur">Urdu</option>
+        <option value="en">English</option>
+        </select>
+    </div>
+
+    <div class="Translation Ar"><h3></h3><p></p></div>
+    </header>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
