@@ -1,0 +1,18 @@
+<% layout('/Layout/boilerplate') %>
+<div class="error-container">
+    <div class="video-background">
+        <video autoplay loop muted playsinline class="error-video">
+            <source src="/images/error.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    <div class="error-content">
+        <h1 class="error-code"><%= statusCode %></h1>
+        <div class="error-message">
+            <h2>Oops! Something went wrong</h2>
+            <p><%= message %></p>
+        </div>
+        <a href="/" class="error-home-btn">Return Home</a>
+    </div>
+</div>
