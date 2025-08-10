@@ -109,13 +109,43 @@ button:hover, button:focus {
     padding: 18px 20px;
     background: linear-gradient(120deg, #f1f1f1 60%, #e0eafc 100%);
     border-radius: 18px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border: 2px solid #00b894;
     box-shadow: 0 2px 12px rgba(0,0,0,0.07);
     transition: box-shadow 0.3s, border 0.3s;
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.7s cubic-bezier(.39,.575,.56,1.000);
+}
+
+.Arabic.Ar p {
+    font-family: 'Amiri Quran', serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 2.5;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+}
+
+.Arabic.Ar h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: ltr;
+    text-align: left;
+}
+
+.Translation.Ar {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+    text-align: right;
+    line-height: 2.2;
+}
+
+.Translation.Ar[lang="en"] {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: ltr;
+    text-align: left;
+    line-height: 1.6;
 }
 .Ar:hover {
     box-shadow: 0 6px 24px rgba(0, 206, 201, 0.13);

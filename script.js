@@ -70,6 +70,7 @@ opt.addEventListener("change", async()=>{
         return;
     }
     try{
+        const translationDiv = document.querySelector('.Translation.Ar');
         if(opt.value == "ur"){
             const urlUR = `https://api.alquran.cloud/v1/ayah/${id}/ur.jalandhry`;
             let resUR = await axios.get(urlUR);
@@ -77,6 +78,7 @@ opt.addEventListener("change", async()=>{
             let Surah = resUR.data.data.surah.englishName;
             h3Trans.innerText = `Verse ${id}: Translation in Urdu \n Surah - ${Surah}`;
             p2.innerText = resultUR;
+            translationDiv.setAttribute('lang', 'ur');
         }
         else if(opt.value == "en"){
             const urlEN = `https://api.alquran.cloud/v1/ayah/${id}/en.asad`;
@@ -85,6 +87,7 @@ opt.addEventListener("change", async()=>{
             let Surah = resEN.data.data.surah.englishName;
             h3Trans.innerText = `Verse ${id}: Translation in English \n Surah - ${Surah}`;
             p2.innerText = resultEN;
+            translationDiv.setAttribute('lang', 'en');
         }
     }
     catch(err) {
