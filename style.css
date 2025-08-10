@@ -69,10 +69,12 @@ input[type="text"] {
     padding: 10px 15px;
     border: 1.5px solid #b2bec3;
     border-radius: 8px;
-    font-size: 1.1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
     outline: none;
     transition: border 0.3s, box-shadow 0.3s;
-    width: 180px;
+    width: min(180px, 100%);
+    flex: 1;
+    min-width: 120px;
 }
 input[type="text"]:focus {
     border: 1.5px solid #00b894;
@@ -86,12 +88,14 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 8px;
-    padding: 10px 22px;
-    font-size: 1.1rem;
+    padding: clamp(8px, 1.5vw, 10px) clamp(15px, 2vw, 22px);
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
     font-weight: 600;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
     outline: none;
+    white-space: nowrap;
+    min-width: max-content;
 }
 button:hover, button:focus {
     transform: scale(1.08) rotate(-2deg);
@@ -266,11 +270,22 @@ audio.active {
         border-radius: 0 0 15px 15px;
     }
     .pic h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: 1px;
-}
-    .search, .Ar {
+        font-size: 2rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+    .search {
+        padding: 8px 2vw;
+        gap: 10px;
+        width: 95%;
+    }
+    .search input[type="text"] {
+        min-width: 100px;
+    }
+    .search button {
+        padding: 8px 15px;
+    }
+    .Ar {
         padding: 8px 2vw;
     }
     .Ar h3 {
