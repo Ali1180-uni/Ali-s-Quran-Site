@@ -1,6 +1,7 @@
 {
   "name": "edits-of-quran-site",
   "version": "1.0.0",
+  "description": "A website for reading and exploring Quran verses",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -10,13 +11,12 @@
   "keywords": ["quran", "islamic", "website"],
   "author": "Ali",
   "license": "ISC",
-  "description": "A website for reading and exploring Quran verses",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "dependencies": {
     "ejs": "^3.1.10",
     "ejs-mate": "^4.0.0",
-    "express": "^5.1.0"
+    "express": "^4.19.2"
   }
 }
