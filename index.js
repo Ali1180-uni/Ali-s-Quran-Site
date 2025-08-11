@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Route Handlers with Error Handling
-app.get('/', (req, res, next) => {
+app.get('/', (req, res) => {
     try {
         res.redirect('/Quran/Landing');
     } catch (error) {
@@ -50,11 +50,8 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("./Redirects/error.ejs", { statusCode, message });
 });
 
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//     console.log(`Server is running on port ${PORT}`);
-// });
 
-
-// Export the Express app for Vercel
-module.exports = app;
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
