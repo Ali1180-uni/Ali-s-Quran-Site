@@ -6,12 +6,12 @@ const Navbar = () => {
 
   // Helper for clean, repetitive link styling
   const linkClasses = ({ isActive }) =>
-    `text-lg font-sans font-medium transition-colors duration-300 ${
-      isActive ? "text-gold" : "text-parchment hover:text-gold"
+    `text-lg font-premium font-medium tracking-wider transition-colors duration-300 ${
+      isActive ? "text-[#F5F5F0]" : "text-[#F5F5F0]/70 hover:text-[#F5F5F0]"
     }`;
 
   return (
-    <nav className="bg-midnight sticky top-0 z-50 shadow-lg border-b border-white/5">
+    <nav className="bg-[#1A1C20] sticky top-0 z-50 shadow-lg border-b border-[#F5F5F0]/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo Section */}
@@ -21,8 +21,8 @@ const Navbar = () => {
               alt="Quran"
               className="h-10 w-10 transition-transform group-hover:scale-110"
             />
-            <span className="text-parchment font-serif text-2xl font-bold tracking-wide">
-              Ali's Quran
+            <span className="text-[#F5F5F0] font-premium text-xl font-bold tracking-widest uppercase">
+              Ali's Quran-Site
             </span>
           </NavLink>
 
@@ -37,12 +37,15 @@ const Navbar = () => {
             <NavLink to="/verse" className={linkClasses}>
               Verse
             </NavLink>
+            <NavLink to="/hadees" className={linkClasses}>
+              Hadees-e-Nabwi
+            </NavLink>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-parchment hover:text-gold transition-colors"
+            className="md:hidden text-[#F5F5F0] hover:text-[#F5F5F0]/70 transition-colors"
           >
             <svg
               className="h-8 w-8"
@@ -64,7 +67,7 @@ const Navbar = () => {
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-60 opacity-100 pb-4" : "max-h-0 opacity-0"}`}
         >
-          <div className="flex flex-col space-y-4 pt-4 border-t border-white/10">
+          <div className="flex flex-col space-y-4 pt-4 border-t border-[#F5F5F0]/10">
             <NavLink
               to="/"
               className={linkClasses}

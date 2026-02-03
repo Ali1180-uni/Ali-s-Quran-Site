@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Lenis from "lenis";
-import "./App.css";
 import Verse from "../Components/Verse";
 import Navbar from "../Components/navbar";
 import Footer from "../Components/footer";
 import Home from "../Components/Home";
 import About from "../Components/About";
+import Hadees from "../Components/Hadees";
 
 
 function App() {
@@ -43,6 +43,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/verse" element={<Verse />} />
+        <Route path="/hadees" element={<Hadees />} />
       </Routes>
       <Footer />
     </div>

@@ -1,33 +1,35 @@
 @import "tailwindcss";
 
-/* Import Google Fonts - English */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
-
-/* Import Google Fonts - Arabic */
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
-
 /* Arabic text utilities */
 .arabic-text {
-  font-family: 'Amiri', 'Traditional Arabic', serif;
+  font-family: 'Amiri', 'Traditional Arabic', serif !important;
   direction: rtl;
   text-align: right;
 }
 
 .arabic-display {
-  font-family: 'Scheherazade New', 'Amiri', serif;
+  font-family: 'Scheherazade New', 'Amiri', serif !important;
   direction: rtl;
   text-align: right;
 }
 
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Quran Arabic - Beautiful for Quranic text */
+.quran-text {
+  font-family: 'Amiri Quran', 'Amiri', serif !important;
+  direction: rtl;
+  text-align: right;
 }
 
+/* Urdu text utilities */
+.urdu-text {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif !important;
+  direction: rtl;
+  text-align: right;
+}
+
+/* Base styles */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   background-color: #F5F5F0;
   color: #1A1C20;
 }

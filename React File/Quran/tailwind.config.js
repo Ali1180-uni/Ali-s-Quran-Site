@@ -17,10 +17,14 @@ export default {
         serif: ['Playfair Display', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
         display: ['Cormorant Garamond', 'serif'],
+        premium: ['Orbitron', 'sans-serif'],
         // Arabic Fonts
         arabic: ['Amiri', 'Traditional Arabic', 'serif'],
         arabicDisplay: ['Scheherazade New', 'Amiri', 'serif'],
         arabicNaskh: ['Noto Naskh Arabic', 'Amiri', 'serif'],
+        quran: ['Amiri Quran', 'Amiri', 'serif'],
+        // Urdu Fonts
+        urdu: ['Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'serif'],
       },
     },
   },
