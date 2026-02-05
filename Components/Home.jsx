@@ -18,7 +18,7 @@ const Home = () => {
       arabicTitle: "الحديث", // Use this prop
       description:
         "Access authentic Hadiths with Arabic text & translations in Urdu and English.",
-      link: "/hadith", // Assuming you have this route, or keep /verse
+      link: "/hadees",
     },
   ];
   return (
