@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import { motion } from 'framer-motion';
 
 // --- THEME CONSTANTS ---
 const COLORS = {
@@ -104,15 +105,31 @@ const Verse = () => {
       </div>
       
       {/* Content Container */}
-      <div className="relative z-10">
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="relative z-10"
+      >
       
       {/* 1. Header & Search Section */}
       <div className="max-w-3xl mx-auto mb-12 text-center">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#F5F5F0] mb-8 drop-shadow-lg">
+        <motion.h1 
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="text-4xl md:text-5xl font-serif font-bold text-[#F5F5F0] mb-8 drop-shadow-lg"
+        >
           Verse Finder
-        </h1>
+        </motion.h1>
 
-        <form onSubmit={handleSubmit(searchVerse)} className="relative max-w-xl mx-auto">
+        <motion.form 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          onSubmit={handleSubmit(searchVerse)} 
+          className="relative max-w-xl mx-auto"
+        >
           <div className="flex flex-col md:flex-row gap-4 shadow-2xl shadow-black/30 p-2 bg-[#1A1C20]/60 backdrop-blur-md rounded-2xl border border-[#F5F5F0]/10">
             <input
               {...register("Verse", { required: "Required" })}
@@ -129,12 +146,23 @@ const Verse = () => {
           </div>
           {errors.Verse && <p className="text-red-400 mt-2 text-sm drop-shadow">{errors.Verse.message}</p>}
           {error && <p className="text-red-400 mt-2 text-sm font-medium drop-shadow">{error}</p>}
-        </form>
+        </motion.form>
       </div>
 
       {/* 2. Result Card */}
       {verseData && (
-        <div className="max-w-4xl mx-auto bg-[#1A1C20]/70 backdrop-blur-lg rounded-3xl shadow-[0_10px_60px_-10px_rgba(0,0,0,0.5)] overflow-hidden border border-[#F5F5F0]/10 animate-fade-in-up">
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ 
+            duration: 0.8, 
+            ease: [0.16, 1, 0.3, 1],
+            type: "spring",
+            stiffness: 100,
+            damping: 20
+          }}
+          className="max-w-4xl mx-auto bg-[#1A1C20]/70 backdrop-blur-lg rounded-3xl shadow-[0_10px_60px_-10px_rgba(0,0,0,0.5)] overflow-hidden border border-[#F5F5F0]/10"
+        >
           
           {/* Card Header */}
           <div className="bg-[#F5F5F0]/10 p-6 md:p-8 flex flex-wrap justify-between items-center text-[#F5F5F0] border-b border-[#F5F5F0]/10">
@@ -206,9 +234,9 @@ const Verse = () => {
               )}
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
-      </div>
+      </motion.div>
     </div>
   );
 };

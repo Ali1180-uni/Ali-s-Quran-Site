@@ -7,6 +7,7 @@ import Footer from "../Components/footer";
 import Home from "../Components/Home";
 import About from "../Components/About";
 import Hadees from "../Components/Hadees";
+import HadeesView from "../Components/HadeesView";
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/verse" element={<Verse />} />
         <Route path="/hadees" element={<Hadees />} />
+        <Route path="/hadees/:bookSlug" element={<HadeesView />} />
       </Routes>
       <Footer />
     </div>

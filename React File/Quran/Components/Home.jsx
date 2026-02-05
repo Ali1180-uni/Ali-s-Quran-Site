@@ -22,7 +22,7 @@ const Home = () => {
     },
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-emerald-50/30">
+    <div className="min-h-screen bg-linear-to-b from-white to-emerald-50/30">
       <Hero />
       {/* Cards Section */}
       <div className="py-16 px-8">
