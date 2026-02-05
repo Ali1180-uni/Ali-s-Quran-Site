@@ -1,55 +1,16 @@
-# Quran Verse Finder Web App
+# React + Vite
 
-## Overview
-This website allows users to search for any verse from the Quran by entering the Surah and Ayah number (e.g., `1:1`). It displays the Arabic text, provides translations in Urdu and English, and plays the audio recitation of the verse. The site features a modern, responsive design with smooth transitions and stylish dropdowns.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
-- **Search by Verse:** Enter Surah:Ayah (e.g., 2:255) to fetch the verse.
-- **Arabic Display:** Shows the original Arabic text of the verse.
-- **Audio Playback:** Plays the recitation of the verse (Alafasy reciter).
-- **Translation Dropdown:** Select Urdu or English translation from a stylish dropdown.
-- **Responsive Design:** Works beautifully on mobile and desktop.
-- **Smooth Animations:** Transitions, hovers, and dropdown animations for a modern feel.
+Currently, two official plugins are available:
 
-## How It Works
-1. Enter a verse number in the input (format: Surah:Ayah, e.g., `1:1`).
-2. Click the **Search** button.
-3. The Arabic verse and audio will appear.
-4. Use the dropdown to select Urdu or English translation.
-5. The translation will appear below the Arabic text.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Technologies Used
-- HTML5, CSS3 (with transitions, animations, and responsive design)
-- JavaScript (ES6+)
-- [Axios](https://axios-http.com/) for API requests
-- [Al Quran Cloud API](https://alquran.cloud/api)
+## React Compiler
 
-## How to Run
-1. Download or clone the repository.
-2. Open `index.html` in your browser.
-3. No server or build step required—everything runs in the browser.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## File Structure
-- `index.html` — Main HTML file
-- `style.css` — All styles and animations
-- `script.js` — JavaScript logic for fetching, displaying, and animating content
+## Expanding the ESLint configuration
 
----
-
-## How to Write in Markdown (.md)
-- Use `#` for headings, `##` for subheadings.
-- Use `-` or `*` for bullet points.
-- Use triple backticks (```) for code blocks.
-- Save the file as `README.md`.
-
-Example:
-```
-# My Project Title
-
-## Description
-This is a sample markdown file.
-```
-
----
-
-Feel free to copy and edit this README for your proposal or documentation!
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
